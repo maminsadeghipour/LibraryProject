@@ -7,11 +7,17 @@ namespace App.Infrastructure.Repository.Ef.User
 	public class UserRepository : IUserRepository
 	{
         
-        private readonly AppDbContext _context = new();
+        private readonly AppDbContext _context;
 
-        public UserRepository()
+        public UserRepository(AppDbContext context)
 		{
+            _context = context;
 		}
+
+        public List<Domain.Core.User.Entity.User> GetAll()
+        {
+            return _context.Users.ToList();
+        }
 
         public List<Domain.Core.Book.Entity.Book>? GetListOfUserBook(int userId)
         {

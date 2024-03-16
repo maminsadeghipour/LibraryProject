@@ -21,6 +21,9 @@
     <ProjectReference Include="..\App.Infrastructure.Repository\App.Infrastructure.Repository.Ef.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\App.Infrastructure.Repository.Dapper\App.Infrastructure.Repository.Dapper.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Admin\" />

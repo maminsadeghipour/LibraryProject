@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Infrastructure.Reposito
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Endpoint.MVC", "App.Endpoint.MVC\App.Endpoint.MVC.csproj", "{11F75AFB-331E-4260-81B2-431EDC820A60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Infrastructure.Repository.Dapper", "App.Infrastructure.Repository.Dapper\App.Infrastructure.Repository.Dapper.csproj", "{5C43D989-CEFF-4D12-A5D5-9852CFA7B7D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{11F75AFB-331E-4260-81B2-431EDC820A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11F75AFB-331E-4260-81B2-431EDC820A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11F75AFB-331E-4260-81B2-431EDC820A60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C43D989-CEFF-4D12-A5D5-9852CFA7B7D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C43D989-CEFF-4D12-A5D5-9852CFA7B7D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C43D989-CEFF-4D12-A5D5-9852CFA7B7D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C43D989-CEFF-4D12-A5D5-9852CFA7B7D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,5 +82,6 @@ Global
 		{B92DCA32-E514-4A9C-A94B-256413F10BF0} = {8E5B7A97-9F75-4179-AFF2-C29ECFC97E4A}
 		{B4573E38-52E2-4610-AE45-E43B99E18587} = {91D6A55D-9500-47BF-A232-C59027D27093}
 		{11F75AFB-331E-4260-81B2-431EDC820A60} = {35022201-209F-434F-A134-655624347E3A}
+		{5C43D989-CEFF-4D12-A5D5-9852CFA7B7D5} = {91D6A55D-9500-47BF-A232-C59027D27093}
 	EndGlobalSection
 EndGlobal

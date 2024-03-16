@@ -58,7 +58,8 @@ namespace App.Infrastructure.Database.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserId")          
+                    b.Property<int?>("UserId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -95,7 +96,7 @@ namespace App.Infrastructure.Database.Migrations
                         .WithMany("BorrowedBook")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        ;
+                        .IsRequired();
 
                     b.Navigation("User");
                 });

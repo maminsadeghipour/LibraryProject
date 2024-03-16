@@ -13,6 +13,11 @@ namespace App.Domain.AppService.User
             _userService = userService;
         }
 
+        public List<Core.User.Entity.User> GetAll()
+        {
+            return _userService.GetAll();
+        }
+
         public List<Core.Book.Entity.Book>? GetListOfUserBook(int userId)
         {
             return _userService.GetListOfUserBook(userId);

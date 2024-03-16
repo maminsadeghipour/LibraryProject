@@ -16,6 +16,7 @@
     <None Remove="Admin\Contract\" />
     <None Remove="Book\Contract\" />
     <None Remove="User\Contract\" />
+    <None Remove="Admin\ModelView\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Book\" />
@@ -27,5 +28,6 @@
     <Folder Include="Admin\Contract\" />
     <Folder Include="Book\Contract\" />
     <Folder Include="User\Contract\" />
+    <Folder Include="Admin\ModelView\" />
   </ItemGroup>
 </Project>

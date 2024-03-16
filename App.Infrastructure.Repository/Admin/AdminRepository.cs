@@ -7,10 +7,11 @@ namespace App.Infrastructure.Repository.Ef.Admin
 	public class AdminRepository : IAdminRepository
     {
 
-		private readonly AppDbContext _context = new();
+		private readonly AppDbContext _context;
 
-		public AdminRepository()
+		public AdminRepository(AppDbContext context)
 		{
+			_context = context;
 		}
 	}
 }

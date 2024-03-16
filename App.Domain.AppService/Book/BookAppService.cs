@@ -43,6 +43,11 @@ namespace App.Domain.AppService.Book
         {
             _bookService.ReturnBook(bookId);
         }
+
+        public Core.Book.Entity.Book GetById(int Id)
+        {
+            return _bookService.GetById(Id);
+        }
     }
 }
 

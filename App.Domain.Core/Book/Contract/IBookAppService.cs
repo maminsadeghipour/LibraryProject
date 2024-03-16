@@ -14,6 +14,9 @@ namespace App.Domain.Core.Book.Contract
         void BorrowBook(int bookId, int userId);
 
         void ReturnBook(int bookId);
+
+        Entity.Book GetById(int Id);
+        
     }
 }
 

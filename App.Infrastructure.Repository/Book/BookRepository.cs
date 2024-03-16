@@ -15,11 +15,13 @@ namespace App.Infrastructure.Repository.Ef.Book
     {
 
 
-		private readonly AppDbContext _context = new();
+		private readonly AppDbContext _context;
 
-        public BookRepository()
-		{
-		}
+        public BookRepository(AppDbContext context)
+        {
+            _context = context;
+
+        }
 
         public void Add(Domain.Core.Book.Entity.Book book)
         {
@@ -47,16 +49,16 @@ namespace App.Infrastructure.Repository.Ef.Book
 
         public List<Domain.Core.Book.Entity.Book> AllBooks()
         {
-            var q = _context.Books.ToQueryString();
+            //var q = _context.Books.ToQueryString();
 
-            var  books =  _context.Books.Select(p => new BookDto
-            {
-                Id = p.Id,
-                //Title = p.Title,
-                //IsBorrowed = p.IsBorrowed,
-                //UserId = p.UserId
-                
-            }).ToList();
+            //var  books =  _context.Books.Select(p => new BookDto
+            //{
+            //    Id = p.Id,
+            //    //Title = p.Title,
+            //    //IsBorrowed = p.IsBorrowed,
+            //    UserId = p.UserId
+
+            //}).ToList();
 
             return _context.Books.ToList();
         }
@@ -74,6 +76,7 @@ namespace App.Infrastructure.Repository.Ef.Book
                 var oldBook = _context.Books.FirstOrDefault(b => b.Id == book.Id);
 
                 oldBook.IsBorrowed = book.IsBorrowed;
+                oldBook.UserId = book.UserId;
 
                 _context.SaveChanges();
                

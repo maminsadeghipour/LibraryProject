@@ -10,17 +10,18 @@ namespace App.Domain.Core.Book.Entity
 		{
 		}
 
-        [Key]
+
         public int Id { get; set; }
 
+		[MaxLength(50,ErrorMessage ="Max Length 50")]
+		[Required]
 		public string Title { get; set; }
 
 		public bool IsBorrowed { get; set; }
 
-		[ForeignKey("User")]
 		public int? UserId { get; set; }
 
-		public User.Entity.User User { get; set; }
+		public User.Entity.User? User { get; set; }
 	}
 }
 

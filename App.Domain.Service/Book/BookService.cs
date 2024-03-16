@@ -8,11 +8,19 @@ namespace App.Domain.Service.Book
 	{
         private readonly IBookRepository _bookRepository;
 
+        
+
+
         public BookService(IBookRepository bookRepository)
         {
             _bookRepository = bookRepository;
         }
 
+        public Core.Book.Entity.Book GetById(int Id)
+        {
+            return _bookRepository.GetById(Id);
+        }
+        
         public void Add(Core.Book.Entity.Book book)
         {
             _bookRepository.Add(book);
@@ -49,6 +57,11 @@ namespace App.Domain.Service.Book
             var book = _bookRepository.GetById(bookId);
             book.IsBorrowed = false;
             book.UserId = null;
+            _bookRepository.Update(book);
+        }
+
+        public void Update(Core.Book.Entity.Book book)
+        {
             _bookRepository.Update(book);
         }
     }

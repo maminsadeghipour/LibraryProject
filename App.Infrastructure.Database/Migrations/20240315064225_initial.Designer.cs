@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace App.Infrastructure.Database.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240314134810_initial")]
+    [Migration("20240315064225_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -61,7 +61,8 @@ namespace App.Infrastructure.Database.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserId")                        
+                    b.Property<int?>("UserId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -98,7 +99,7 @@ namespace App.Infrastructure.Database.Migrations
                         .WithMany("BorrowedBook")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        ;
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
